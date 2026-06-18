@@ -19,6 +19,7 @@ import roomBookingsRouter          from "./routes/roomBookings.js";
 import uploadsRouter               from "./routes/uploads.js";
 import analyticsIntelligenceRouter from "./routes/analyticsIntelligence.js";
 import clientAuthRouter             from "./routes/clientAuth.js";
+import widgetRouter                 from "./routes/widget.js";
 import shiftTemplatesRouter         from "./routes/shiftTemplates.js";
 import exportsRouter                from "./routes/exports.js";
 
@@ -52,6 +53,9 @@ app.get("/api/health", (_req, res) =>
 
 // auth router has both public (login) and protected (me) endpoints — handles internally
 app.use("/api/v1/auth", authRouter);
+
+// Public widget API — no auth, used by /booking client page
+app.use("/api/v1/widget", widgetRouter);
 
 // Client auth (public booking widget) — handles its own auth via Bearer token
 app.use("/api/v1/client-auth", clientAuthRouter);

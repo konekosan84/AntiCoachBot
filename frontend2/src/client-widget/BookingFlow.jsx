@@ -16,10 +16,14 @@ import {
   ChevronDown, Loader2, ArrowRight, Info, Sun, Moon, LogIn, UserCircle,
 } from "lucide-react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { getBranches } from "../api/branches";
-import { getServices } from "../api/services";
-import { getEmployees } from "../api/employees";
-import { apiFetch } from "../api/apiFetch.js";
+import {
+  getWidgetBranches,
+  getWidgetServices,
+  getWidgetEmployees,
+  getWidgetShifts,
+  getWidgetBookings,
+  createWidgetBooking,
+} from "../api/widget.js";
 import { formatRuPhone, toRawPhone } from "../helpers/phoneMask.js";
 import { useClientAuth } from "../helpers/ClientAuthContext.jsx";
 import LoginModal from "./LoginModal.jsx";
@@ -210,20 +214,20 @@ export default function BookingFlow() {
         const dateFrom = todayYmd();
         const dateTo   = addDays(dateFrom, 30);
         const [b, s, e, sh] = await Promise.all([
-          getBranches(),
-          getServices(),
-          getEmployees(),
-          apiFetch(`/api/v1/schedule/shifts?date_from=${dateFrom}&date_to=${dateTo}`),
+          getWidgetBranches(),
+          getWidgetServices(),
+          getWidgetEmployees(),
+          getWidgetShifts(dateFrom, dateTo),
         ]);
         if (cancelled) return;
         setBranches(Array.isArray(b) ? b : []);
         setServices(Array.isArray(s) ? s.filter(x => x.is_active !== false) : []);
         setEmployees(Array.isArray(e) ? e : []);
-        setShifts(Array.isArray(sh) ? sh : Array.isArray(sh?.data) ? sh.data : []);
-        // bookings (for overlap check, optional but nice)
+        setShifts(Array.isArray(sh) ? sh : []);
+        // bookings for overlap check (optional)
         try {
-          const bk = await apiFetch(`/api/v1/bookings?date_from=${dateFrom}&date_to=${dateTo}`);
-          if (!cancelled) setBookings(Array.isArray(bk) ? bk : Array.isArray(bk?.data) ? bk.data : []);
+          const bk = await getWidgetBookings(dateFrom, dateTo);
+          if (!cancelled) setBookings(Array.isArray(bk?.data) ? bk.data : []);
         } catch {}
       } catch (er) {
         console.error("BookingFlow load:", er);
@@ -805,14 +809,11 @@ function BookingPanel({ service, branches, employees, availability, nearest, nea
       if (isLoggedIn) {
         await bookAuthenticated(basePayload);
       } else {
-        await apiFetch("/api/v1/bookings", {
-          method: "POST",
-          body: JSON.stringify({
-            ...basePayload,
-            status:    "booked",
-            full_name: client.full_name.trim(),
-            phone:     "+" + toRawPhone(client.phone),
-          }),
+        await createWidgetBooking({
+          ...basePayload,
+          status:    "booked",
+          full_name: client.full_name.trim(),
+          phone:     "+" + toRawPhone(client.phone),
         });
       }
 
