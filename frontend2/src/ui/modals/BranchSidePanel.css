@@ -1,0 +1,59 @@
+.side-panel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+}
+
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 420px;
+  height: 100vh;
+
+  background: rgba(20, 25, 40, 0.96);
+  backdrop-filter: blur(18px);
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.side-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side-panel-header h3 {
+  margin: 0;
+}
+
+.side-panel-body {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 16px;
+}
+
+.side-panel-body label {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.side-panel-body input,
+.side-panel-body select {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.side-panel-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}

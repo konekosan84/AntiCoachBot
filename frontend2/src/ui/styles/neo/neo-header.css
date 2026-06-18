@@ -1,0 +1,45 @@
+.neo-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.neo-page-header h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.neo-search {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  width: 220px;
+}
+
+.view-switch button {
+  background: rgba(255,255,255,0.07);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
+}
+
+.view-switch button.active {
+  background: linear-gradient(90deg,#3ACFD5,#6558F5);
+}
+
+.view-switch button:hover {
+  opacity: 0.8;
+}

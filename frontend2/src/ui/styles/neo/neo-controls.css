@@ -1,0 +1,48 @@
+.neo-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.neo-search {
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  width: 260px;
+}
+
+.neo-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.neo-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.neo-btn-primary {
+  background: #6d6bff;
+  color: #fff;
+}
+
+.neo-btn-primary:hover {
+  background: #7b79ff;
+}
+
+.neo-btn-outline {
+  background: transparent;
+  border: 1px solid #6d6bff;
+  color: #6d6bff;
+}
+
+.neo-btn-outline:hover {
+  background: rgba(109, 107, 255, 0.2);
+}

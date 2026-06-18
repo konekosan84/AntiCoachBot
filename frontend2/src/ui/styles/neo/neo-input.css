@@ -1,0 +1,38 @@
+.neo-input {
+  width: 100%;
+  border: 1px solid var(--border-input);
+  background: var(--bg-input);
+  color: var(--text-primary);
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.25s;
+}
+
+.neo-input::placeholder {
+  color: var(--text-muted);
+}
+
+.neo-input:focus {
+  border-color: var(--border-input-focus);
+  box-shadow: 0 0 0 2px rgba(58, 207, 213, 0.18);
+  outline: none;
+}
+
+.neo-form-group {
+  margin-bottom: 14px;
+}
+
+.neo-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-label);
+}
+
+/* select dropdown — options always need white bg for readability */
+select.neo-input option {
+  background: #fff;
+  color: #111;
+}

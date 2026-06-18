@@ -1,0 +1,61 @@
+.neo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.neo-header-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.neo-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.neo-header-search {
+  background: var(--bg-input);
+  border: 1px solid var(--border-input);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 13px;
+  width: 200px;
+}
+
+.neo-header-toggle {
+  display: flex;
+  gap: 6px;
+}
+
+.toggle-btn {
+  background: var(--bg-card);
+  padding: 7px 12px;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.toggle-btn.active {
+  background: linear-gradient(90deg, #3acfd5, #6558f5);
+  color: #fff;
+  border-color: transparent;
+}
+
+.neo-add-btn {
+  background: linear-gradient(90deg, #3acfd5, #6558f5);
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  font-size: 13px;
+}

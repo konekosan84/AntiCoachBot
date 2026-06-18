@@ -1,0 +1,185 @@
+.neo-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sidebar);
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+/* Sidebar header (logo + user card) — stays at top */
+.neo-sidebar-header {
+  padding: 16px 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.neo-sidebar-title {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Scrollable nav area */
+.neo-sidebar-nav {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 4px 12px;
+}
+
+.neo-sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+.neo-sidebar-nav::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+}
+
+.neo-nav-item {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: background 0.18s, color 0.18s, transform 0.12s;
+}
+
+.neo-nav-item:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+  transform: translateX(2px);
+}
+
+.neo-nav-item.active {
+  background: linear-gradient(135deg, #3acfd5, #6558f5);
+  color: #ffffff;
+  box-shadow: var(--shadow-nav-active);
+}
+
+/* Footer — sticky at bottom of viewport, always visible */
+.neo-sidebar-footer {
+  padding: 12px 14px 14px;
+  border-top: 1px solid var(--border);
+  display: grid;
+  gap: 8px;
+  flex-shrink: 0;
+  background: var(--bg-sidebar);
+}
+
+.neo-theme-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.neo-theme-toggle:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.neo-theme-toggle-knob {
+  width: 34px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--border-input);
+  position: relative;
+  transition: background 0.25s;
+  flex-shrink: 0;
+}
+
+.neo-theme-toggle-knob.on {
+  background: linear-gradient(90deg, #3acfd5, #6558f5);
+}
+
+.neo-theme-toggle-knob::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.25s;
+}
+
+.neo-theme-toggle-knob.on::after {
+  transform: translateX(16px);
+}
+
+/* Mobile: collapsible sidebar */
+.neo-sidebar-burger {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .neo-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+
+  .neo-sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .neo-sidebar-burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 150;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.16);
+  }
+
+  .neo-sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 199;
+    background: rgba(0,0,0,0.45);
+  }
+  .neo-sidebar-overlay.is-open { display: block; }
+
+  .neo-content {
+    padding-top: 60px !important;
+  }
+}

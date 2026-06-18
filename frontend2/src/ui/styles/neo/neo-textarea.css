@@ -1,0 +1,24 @@
+/* src/ui/styles/neo/neo-textarea.css */
+
+.neo-textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #2b2c31;
+  background: #141418;
+  color: #f3f3f3;
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+  transition: 0.15s;
+}
+
+.neo-textarea::placeholder {
+  color: #6f7076;
+}
+
+.neo-textarea:focus {
+  border-color: #3acfd5;
+  box-shadow: 0 0 0 2px rgba(58, 207, 213, 0.4);
+}

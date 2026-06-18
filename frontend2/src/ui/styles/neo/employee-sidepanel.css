@@ -1,0 +1,68 @@
+.neo-sidepanel-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 20, 0.65);
+  z-index: 1000;
+}
+
+.neo-sidepanel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 420px;
+  height: 100%;
+  background: linear-gradient(180deg, #0b1028, #070b1a);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.neo-sidepanel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.neo-sidepanel-header button {
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.neo-sidepanel-body {
+  flex: 1;
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.neo-sidepanel-body input,
+.neo-sidepanel-body select {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.neo-sidepanel-footer {
+  display: flex;
+  gap: 10px;
+}
+
+.neo-sidepanel-footer .primary {
+  flex: 1;
+  background: linear-gradient(90deg, #3ACFD5, #6558F5);
+  border: 0;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.neo-sidepanel-footer .ghost {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  border-radius: 12px;
+}

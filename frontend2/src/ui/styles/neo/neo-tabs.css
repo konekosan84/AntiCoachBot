@@ -1,0 +1,45 @@
+.neo-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.neo-tab {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--bg-tab);
+  color: var(--tab-color);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+
+.neo-tab:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.neo-tab.active {
+  background: linear-gradient(90deg, #3acfd5, #6558f5);
+  color: #fff;
+  border-color: transparent;
+}
+
+.neo-btn.primary {
+  margin-left: auto;
+  padding: 7px 14px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #3acfd5, #6558f5);
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.18s;
+}
+
+.neo-btn.primary:hover {
+  opacity: 0.85;
+}

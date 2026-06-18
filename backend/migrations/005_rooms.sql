@@ -1,0 +1,1 @@
+CREATE TABLE slotiq.rooms (    id SERIAL PRIMARY KEY,    branch_id INT REFERENCES slotiq.branches(id) ON DELETE CASCADE,    name VARCHAR(120) NOT NULL,    created_at TIMESTAMP DEFAULT NOW());

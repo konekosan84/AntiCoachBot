@@ -1,0 +1,29 @@
+/* Schedule-specific helper styles */
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 90px 120px 120px auto;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.day-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.chk {
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chk input {
+  accent-color: #3acfd5;
+}

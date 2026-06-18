@@ -1,0 +1,94 @@
+.neo-btn {
+  background: linear-gradient(135deg, #3acfd5, #6558f5);
+  border: none;
+  padding: 9px 18px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.neo-btn:hover {
+  opacity: 0.85;
+}
+.neo-btn-glow {
+  box-shadow: 0 0 12px #6558f5;
+}
+
+.neo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.neo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+.neo-modal-window {
+  width: 480px;
+  background: var(--bg-panel);
+  color: var(--text-primary);
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+.neo-modal-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.neo-input-block {
+  margin-bottom: 14px;
+}
+.neo-input-block label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: var(--text-label);
+  font-size: 13px;
+}
+.neo-input-block input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border-input);
+  border-radius: 8px;
+  background: var(--bg-input);
+  color: var(--text-primary);
+}
+
+.neo-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.neo-table th {
+  text-align: left;
+  padding: 8px 10px;
+  background: var(--bg-th);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.neo-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 13px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}

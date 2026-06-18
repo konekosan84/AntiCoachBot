@@ -1,0 +1,28 @@
+.neo-btn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.18s, background 0.18s;
+}
+
+.neo-btn-primary {
+  background: linear-gradient(90deg, #3acfd5 0%, #6558f5 100%);
+  color: #fff;
+}
+
+.neo-btn-primary:hover {
+  opacity: 0.85;
+}
+
+.neo-btn-secondary {
+  background: var(--bg-btn-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.neo-btn-secondary:hover {
+  background: var(--bg-card-hover);
+}

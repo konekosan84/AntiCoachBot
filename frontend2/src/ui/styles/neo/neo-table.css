@@ -1,0 +1,90 @@
+.neo-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.neo-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: background 0.25s;
+}
+
+.neo-table thead tr {
+  background: var(--bg-th);
+}
+
+.neo-table th {
+  text-align: left;
+  padding: 11px 13px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.neo-table td {
+  padding: 11px 13px;
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.neo-table tbody tr {
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.neo-table tbody tr:hover {
+  background: var(--bg-tr-hover);
+}
+
+.status {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.on {
+  background: rgba(50, 200, 120, 0.18);
+  color: #34d399;
+}
+
+.status.off {
+  background: rgba(255, 80, 80, 0.18);
+  color: #f87171;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.neo-btn.small {
+  padding: 4px 8px;
+  border-radius: 7px;
+  background: var(--bg-btn-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.neo-btn.small:hover {
+  background: var(--bg-card-hover);
+}
+
+.neo-btn.small.danger:hover {
+  background: rgba(255, 80, 80, 0.25);
+  color: #f87171;
+}

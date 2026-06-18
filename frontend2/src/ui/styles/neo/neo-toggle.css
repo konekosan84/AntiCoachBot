@@ -1,0 +1,21 @@
+.neo-toggle {
+  display: flex;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.neo-toggle button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.neo-toggle button.active {
+  background: linear-gradient(90deg, #3ACFD5 0%, #6558F5 100%);
+}

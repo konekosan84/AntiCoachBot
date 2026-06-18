@@ -1,0 +1,42 @@
+/* Общий UI-слой */
+@import "./ui.css";
+
+/* Базовые элементы */
+@import "./avatar.css";
+@import "./neo-button.css";
+@import "./neo-input.css";
+@import "./neo-textarea.css";
+@import "./neo-toggle.css";
+@import "./neo-tags.css";
+
+/* Карточки / layout */
+@import "./neo-card.css";
+@import "./neo-layout.css";
+@import "./neo-list.css";
+@import "./neo-branch-card.css";
+
+/* Таблицы */
+@import "./neo-table-base.css";
+@import "./neo-table.css";
+
+/* Сайдбар, модалки, schedule */
+@import "./neo-sidebar.css";
+@import "./neo-sidepanel.css";
+@import "./neo-modal.css";
+@import "./neo-schedule.css";
+
+/* Формы, поиск, селекты, мультиселект, табы */
+@import "./neo-search.css";
+@import "./neo-select.css";
+@import "./neo-multiselect.css";
+@import "./neo-tabs.css";
+
+/* Хедеры / шапки страниц */
+@import "./neo-header.css";
+@import "./neo-page-header.css";
+
+/* Экшены / кнопки действий */
+@import "./neo-actions.css";
+
+/* Если ui-kit.css у тебя что-то ещё подключает — пусть тоже будет */
+@import "./ui-kit.css";

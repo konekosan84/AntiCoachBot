@@ -1,0 +1,115 @@
+.neo-card {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color 0.25s, transform 0.2s, box-shadow 0.2s, background 0.25s;
+}
+
+.neo-card:hover {
+  border-color: rgba(80, 160, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+  background: var(--bg-card-hover);
+}
+
+.neo-card-left {
+  display: flex;
+  align-items: center;
+}
+
+.neo-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.neo-avatar.fallback {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #3acfd5, #6558f5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.neo-card-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.neo-card-row.name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.neo-card-row.position {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.neo-card-row.label {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.neo-tag-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.neo-pill {
+  background: var(--bg-pill);
+  color: var(--text-secondary);
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.neo-pill.more {
+  background: rgba(100, 180, 255, 0.2);
+  color: #60a5fa;
+}
+
+.neo-pill.empty {
+  opacity: 0.4;
+}
+
+.neo-card-status {
+  margin-top: 4px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-dot.on  { background: #4caf50; }
+.status-dot.off { background: #f44336; }

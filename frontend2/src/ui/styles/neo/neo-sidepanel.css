@@ -1,0 +1,55 @@
+.neo-sidepanel-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 20, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+:root[data-theme="light"] .neo-sidepanel-backdrop {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.neo-sidepanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 420px;
+  max-width: 95vw;
+  height: 100vh;
+  background: var(--bg-sidepanel);
+  padding: 24px;
+  z-index: 1001;
+  overflow-y: auto;
+  color: var(--text-primary);
+  transition: background 0.25s;
+}
+
+.neo-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: var(--close-btn-color);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+.neo-close:hover {
+  opacity: 1;
+}
+
+/* override из index.css */
+.neo-sidepanel-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: stretch !important;
+  z-index: 999999 !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  pointer-events: auto !important;
+}

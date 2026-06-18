@@ -1,0 +1,38 @@
+.neo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.neo-action-btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.neo-action-btn.edit {
+  background: rgba(58, 207, 213, 0.2);
+  color: #3acfd5;
+}
+
+.neo-action-btn.edit:hover {
+  background: rgba(58, 207, 213, 0.35);
+}
+
+.neo-action-btn.delete {
+  background: rgba(255, 80, 80, 0.2);
+  color: #ff4d4d;
+}
+
+.neo-action-btn.delete:hover {
+  background: rgba(255, 80, 80, 0.35);
+}
+
+.neo-table-empty {
+  text-align: center;
+  padding: 16px;
+  opacity: 0.6;
+  font-size: 14px;
+}

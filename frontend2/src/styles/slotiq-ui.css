@@ -1,0 +1,146 @@
+/* ============================
+   SLOTIQ PRO DESIGN SYSTEM 2025
+   Hybrid B + C (Premium Glass + SlotIQ Header)
+   ============================ */
+
+/* ----- Цвета бренда ----- */
+:root {
+  --slotiq-purple: #6558F5;
+  --slotiq-cyan: #3ACFD5;
+  --slotiq-glass-bg: rgba(255, 255, 255, 0.08);
+
+  --slotiq-border: rgba(255, 255, 255, 0.18);
+  --slotiq-text-main: #ffffff;
+  --slotiq-text-secondary: rgba(255, 255, 255, 0.6);
+
+  --slotiq-bg-dark: #0f0f15;
+  --slotiq-bg-panel: rgba(255, 255, 255, 0.06);
+}
+
+/* ----- Стекло + Blur ------ */
+.slotiq-glass {
+  background: var(--slotiq-glass-bg);
+  border: 1px solid var(--slotiq-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+/* ----- Тени (дорогие!) ----- */
+.slotiq-shadow {
+  box-shadow:
+     0 4px 10px rgba(0,0,0,0.2),
+     0 12px 32px rgba(0,0,0,0.35);
+}
+
+/* ----- Заголовок модалки с фирменным SLOTIQ баром ----- */
+.slotiq-modal-header {
+  background: linear-gradient(90deg, var(--slotiq-purple), var(--slotiq-cyan));
+  padding: 16px 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 16px 16px 0 0;
+}
+
+/* ----- Контент модалки ----- */
+.slotiq-modal-body {
+  padding: 24px;
+  color: var(--slotiq-text-main);
+  font-size: 15px;
+}
+
+/* ----- Нижние кнопки ----- */
+.slotiq-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px 24px;
+}
+
+/* ---------- КНОПКИ ---------- */
+.slotiq-btn-primary {
+  background: linear-gradient(90deg, var(--slotiq-purple), var(--slotiq-cyan));
+  border: none;
+  padding: 10px 20px;
+  border-radius: 14px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.slotiq-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(80, 60, 255, 0.35);
+}
+
+.slotiq-btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--slotiq-border);
+  padding: 10px 20px;
+  border-radius: 14px;
+  color: var(--slotiq-text-main);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.slotiq-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* -------- Input / Select -------- */
+.slotiq-input,
+.slotiq-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid var(--slotiq-border);
+  padding: 10px 14px;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 14px;
+}
+
+.slotiq-input:focus,
+.slotiq-select:focus {
+  outline: none;
+  border-color: var(--slotiq-cyan);
+  box-shadow: 0 0 0 2px rgba(58, 207, 213, 0.4);
+}
+
+/* ----- Анимация появления ----- */
+@keyframes slotiq-fade-in {
+  0% { opacity: 0; transform: scale(0.94); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.slotiq-animate {
+  animation: slotiq-fade-in 0.25s ease-out;
+}
+
+/* ===== Modal Overlay ===== */
+.slotiq-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+/* ===== Modal Window ===== */
+.slotiq-modal {
+  width: 480px;
+  max-width: 92%;
+  border-radius: 18px;
+}
+
+.slotiq-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--slotiq-text-secondary);
+  font-size: 13px;
+}

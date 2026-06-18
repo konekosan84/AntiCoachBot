@@ -1,0 +1,39 @@
+/* NEO UI 2039 — базовый набор */
+
+:root {
+  --neo-bg: #0e1120;
+  --neo-card: #13182c;
+  --neo-border: rgba(255,255,255,0.08);
+  --neo-text: #e6e8f5;
+  --neo-text-dim: rgba(230,232,245,0.6);
+  --neo-primary: #6a5cff;
+  --neo-primary-hover: #857aff;
+  --neo-accent: #3acfd5;
+  --neo-danger: #ff4d6d;
+}
+
+/* Глобальный фон */
+body {
+  background: var(--neo-bg);
+  color: var(--neo-text);
+}
+
+/* Карточки */
+.neo-card {
+  background: var(--neo-card);
+  border: 1px solid var(--neo-border);
+  border-radius: 14px;
+  padding: 18px;
+  transition: 0.25s ease;
+}
+
+.neo-card:hover {
+  border-color: var(--neo-primary);
+}
+
+/* Заголовки */
+.neo-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--neo-text);
+}

@@ -1,0 +1,50 @@
+.neo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 350px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.neo-list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.neo-list-item:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.neo-list-item.selected {
+  background: linear-gradient(135deg, #3acfd5, #6558f5);
+  border-color: transparent;
+}
+
+.neo-list-item .avatar {
+  width: 34px;
+  height: 34px;
+  background: rgba(255,255,255,0.22);
+  border-radius: 50%;
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.neo-list-item.selected .avatar {
+  background: rgba(255,255,255,0.85);
+}
+
+.neo-list-item .label {
+  font-size: 15px;
+  color: #fff;
+}

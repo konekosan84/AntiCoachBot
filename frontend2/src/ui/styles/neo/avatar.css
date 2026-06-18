@@ -1,0 +1,18 @@
+.neo-avatar {
+  background: linear-gradient(135deg, #3ACFD5 0%, #6558F5 100%);
+  border-radius: 50%;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(101, 88, 245, 0.4);
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.neo-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

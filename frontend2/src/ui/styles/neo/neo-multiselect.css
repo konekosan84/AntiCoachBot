@@ -1,0 +1,101 @@
+.neo-ms-wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 16px;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.neo-ms-label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #c9d2e4;
+}
+
+.neo-ms-control {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.neo-ms-control:hover {
+  border-color: #6a82fb;
+}
+
+.neo-ms-placeholder {
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.neo-ms-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.neo-ms-tag,
+.neo-ms-tag-more {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.neo-ms-arrow {
+  opacity: 0.6;
+}
+
+.neo-ms-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  background: rgba(15,17,22,0.98);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 10px;
+  z-index: 40;
+  backdrop-filter: blur(10px);
+}
+
+.neo-ms-search {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.neo-ms-options {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.neo-ms-option {
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.neo-ms-option:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.neo-ms-option-selected {
+  background: rgba(106,130,251,0.25);
+  border-left: 3px solid #6a82fb;
+}
+
+.neo-ms-empty {
+  padding: 10px;
+  opacity: 0.5;
+  text-align: center;
+}

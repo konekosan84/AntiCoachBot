@@ -1,0 +1,58 @@
+.neo-employee-card {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 18px;
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 30, 60, 0.55),
+    rgba(10, 15, 35, 0.55)
+  );
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.neo-employee-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+.neo-employee-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3ACFD5, #6558F5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #071019;
+}
+
+.neo-employee-info {
+  flex: 1;
+}
+
+.neo-employee-name {
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+}
+
+.neo-employee-status {
+  font-size: 12px;
+  color: #3ACFD5;
+}
+
+.neo-employee-meta {
+  opacity: .75;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.neo-employee-branches {
+  margin-top: 6px;
+  font-size: 13px;
+  opacity: .6;
+}

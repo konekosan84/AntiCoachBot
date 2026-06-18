@@ -1,0 +1,182 @@
+/* =============================================
+   SLOTIQ PRO — CSS Custom Properties
+   data-theme="dark"  (default)
+   data-theme="light"
+   ============================================= */
+
+:root {
+  /* --- DARK THEME (default) --- */
+  --bg-base:           #050712;
+  --bg-sidebar:        rgba(5, 8, 25, 0.98);
+  --bg-card:           rgba(255, 255, 255, 0.04);
+  --bg-card-hover:     rgba(255, 255, 255, 0.07);
+  --bg-input:          rgba(20, 25, 40, 0.9);
+  --bg-th:             rgba(255, 255, 255, 0.06);
+  --bg-tr-hover:       rgba(80, 160, 255, 0.12);
+  --bg-sidepanel:      linear-gradient(180deg, #0b1022, #070a17);
+  --bg-tab:            rgba(255, 255, 255, 0.08);
+  --bg-pill:           rgba(255, 255, 255, 0.08);
+  --bg-btn-secondary:  rgba(255, 255, 255, 0.10);
+
+  --text-primary:   #f5f7ff;
+  --text-secondary: rgba(245, 247, 255, 0.70);
+  --text-muted:     rgba(245, 247, 255, 0.50);
+  --text-label:     rgba(245, 247, 255, 0.78);
+
+  --border:             rgba(255, 255, 255, 0.08);
+  --border-input:       rgba(255, 255, 255, 0.20);
+  --border-input-focus: rgba(110, 180, 255, 0.80);
+
+  --shadow-sidebar: 16px 0 45px rgba(0, 0, 0, 0.6);
+  --shadow-nav-active: 0 0 22px rgba(101, 88, 245, 0.55);
+  --shadow-card-hover: none;
+
+  --scrollbar-thumb: rgba(148, 163, 184, 0.7);
+
+  /* elevated cards (NeoBranchCard etc.) */
+  --bg-card-elevated: linear-gradient(145deg, rgba(15,27,46,0.9), rgba(11,18,32,0.9));
+  --shadow-card-elevated: 0 0 24px rgba(0,255,255,0.07), 0 4px 16px rgba(0,0,0,0.25);
+  --border-card-elevated: rgba(255,255,255,0.12);
+
+  /* panels / rows */
+  --bg-panel:   #0b1220;
+  --bg-section: #121b31;
+  --bg-row:     linear-gradient(180deg, rgba(16,26,47,0.98) 0%, rgba(13,22,40,0.98) 100%);
+  --bg-row-hover: linear-gradient(180deg, rgba(18,30,54,1) 0%, rgba(14,24,44,1) 100%);
+  --border-row: rgba(255,255,255,0.07);
+  --border-row-hover: rgba(90,125,255,0.22);
+
+  /* status badges */
+  --badge-booked-bg:    rgba(59,130,246,0.16);
+  --badge-booked-text:  #93c5fd;
+  --badge-booked-border: rgba(59,130,246,0.34);
+  --badge-done-bg:    rgba(34,197,94,0.16);
+  --badge-done-text:  #86efac;
+  --badge-done-border: rgba(34,197,94,0.34);
+  --badge-cancel-bg:    rgba(239,68,68,0.16);
+  --badge-cancel-text:  #fca5a5;
+  --badge-cancel-border: rgba(239,68,68,0.34);
+  --badge-noshow-bg:    rgba(107,114,128,0.20);
+  --badge-noshow-text:  #d1d5db;
+  --badge-noshow-border: rgba(148,163,184,0.26);
+  --badge-default-bg:    rgba(255,255,255,0.08);
+  --badge-default-text:  #e5e7eb;
+  --badge-default-border: rgba(255,255,255,0.12);
+
+  --layout-bg:
+    radial-gradient(circle at top left, rgba(58, 207, 213, 0.18), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(101, 88, 245, 0.22), transparent 55%),
+    #050712;
+
+  --tab-color:  #cfd3ff;
+  --close-btn-color: white;
+
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg-base:           #f0f4fa;
+  --bg-sidebar:        #ffffff;
+  --bg-card:           rgba(255, 255, 255, 0.92);
+  --bg-card-hover:     #ffffff;
+  --bg-input:          #ffffff;
+  --bg-th:             rgba(0, 0, 0, 0.04);
+  --bg-tr-hover:       rgba(58, 207, 213, 0.07);
+  --bg-sidepanel:      linear-gradient(180deg, #ffffff, #f5f8ff);
+  --bg-tab:            rgba(0, 0, 0, 0.06);
+  --bg-pill:           rgba(0, 0, 0, 0.07);
+  --bg-btn-secondary:  rgba(0, 0, 0, 0.07);
+
+  --text-primary:   #1a1d2e;
+  --text-secondary: rgba(26, 29, 46, 0.65);
+  --text-muted:     rgba(26, 29, 46, 0.45);
+  --text-label:     rgba(26, 29, 46, 0.75);
+
+  --border:             rgba(0, 0, 0, 0.09);
+  --border-input:       rgba(0, 0, 0, 0.18);
+  --border-input-focus: rgba(58, 207, 213, 0.80);
+
+  --shadow-sidebar: 2px 0 20px rgba(0, 0, 0, 0.08);
+  --shadow-nav-active: 0 0 18px rgba(101, 88, 245, 0.20);
+  --shadow-card-hover: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  --scrollbar-thumb: rgba(100, 116, 139, 0.45);
+
+  /* elevated cards (NeoBranchCard etc.) */
+  --bg-card-elevated: #ffffff;
+  --shadow-card-elevated: 0 2px 16px rgba(0,0,0,0.07), 0 0 0 1px rgba(0,0,0,0.05);
+  --border-card-elevated: rgba(0,0,0,0.08);
+
+  /* panels / rows */
+  --bg-panel:   #ffffff;
+  --bg-section: #eef2fa;
+  --bg-row:     #ffffff;
+  --bg-row-hover: #f0f7ff;
+  --border-row: rgba(0,0,0,0.07);
+  --border-row-hover: rgba(58,207,213,0.45);
+
+  /* status badges */
+  --badge-booked-bg:    rgba(59,130,246,0.12);
+  --badge-booked-text:  #1d4ed8;
+  --badge-booked-border: rgba(59,130,246,0.28);
+  --badge-done-bg:    rgba(22,163,74,0.12);
+  --badge-done-text:  #166534;
+  --badge-done-border: rgba(22,163,74,0.28);
+  --badge-cancel-bg:    rgba(239,68,68,0.12);
+  --badge-cancel-text:  #991b1b;
+  --badge-cancel-border: rgba(239,68,68,0.28);
+  --badge-noshow-bg:    rgba(107,114,128,0.12);
+  --badge-noshow-text:  #374151;
+  --badge-noshow-border: rgba(107,114,128,0.22);
+  --badge-default-bg:    rgba(0,0,0,0.06);
+  --badge-default-text:  #374151;
+  --badge-default-border: rgba(0,0,0,0.12);
+
+  --layout-bg:
+    radial-gradient(circle at top left, rgba(58, 207, 213, 0.06), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(101, 88, 245, 0.08), transparent 55%),
+    #f0f4fa;
+
+  --tab-color:  rgba(26, 29, 46, 0.70);
+  --close-btn-color: #1a1d2e;
+
+  color-scheme: light;
+}
+
+/* =============================================
+   TAILWIND LIGHT-MODE OVERRIDES
+   Analytics.jsx и другие компоненты используют
+   Tailwind-классы text-white / bg-white/* без
+   dark: префикса. В светлой теме переопределяем.
+   ============================================= */
+
+:root[data-theme="light"] [class*="text-white"] {
+  color: var(--text-primary) !important;
+}
+
+:root[data-theme="light"] [class*="bg-white/"] {
+  background-color: var(--bg-card) !important;
+}
+
+:root[data-theme="light"] [class*="border-white/"] {
+  border-color: var(--border) !important;
+}
+
+/* KPI cards */
+:root[data-theme="light"] .rounded-\[20px\] {
+  box-shadow: var(--shadow-card-elevated) !important;
+}
+
+/* Analytics block headers */
+:root[data-theme="light"] [class*="border-b"] {
+  border-bottom-color: var(--border) !important;
+}
+
+/* Компонент-карточка, который используется в Bookings/Clients/Dashboard */
+.visionos-card {
+  border-radius: 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: background 0.25s, border-color 0.25s;
+}
+

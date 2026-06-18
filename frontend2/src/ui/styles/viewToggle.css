@@ -1,0 +1,24 @@
+.neo-toggle-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.neo-toggle {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.neo-toggle:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.neo-toggle.active {
+  background: linear-gradient(90deg, #3acfd5, #3a4ed5);
+  border-color: transparent;
+}

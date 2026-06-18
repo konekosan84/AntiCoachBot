@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables — ПЕРВЫМ, до всего остального */
+@import "./ui/styles/neo/theme-vars.css";
+
+/* UI-KIT */
+@import "./ui/styles/neo/neo-card.css";
+@import "./ui/styles/neo/neo-table.css";
+@import "./ui/styles/neo/neo-sidepanel.css";
+@import "./ui/styles/neo/neo-input.css";
+@import "./ui/styles/neo/neo-select.css";
+@import "./ui/styles/neo/neo-button.css";
+@import "./ui/styles/neo/neo-tabs.css";
+@import "./ui/styles/neo/neo-layout.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.25s, color 0.25s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  padding: 0;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+/* Inputs override (dark-specific overrides из index.css убраны — всё в neo-input.css) */
+input.neo-input,
+textarea.neo-input,
+select.neo-input {
+  background: var(--bg-input) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-input);
+}
+
+input.neo-input::placeholder,
+textarea.neo-input::placeholder {
+  color: var(--text-muted);
+}
+
+input.neo-input:focus,
+textarea.neo-input:focus,
+select.neo-input:focus {
+  outline: none;
+  border-color: var(--border-input-focus);
+  box-shadow: 0 0 0 2px rgba(58, 207, 213, 0.18);
+}
